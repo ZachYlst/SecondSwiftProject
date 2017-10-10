@@ -54,14 +54,38 @@
 		A6BFECCA1F8D03AB00723152 /* SecondSwiftProject */ = {
 			isa = PBXGroup;
 			children = (
-				A6BFECCB1F8D03AB00723152 /* AppDelegate.swift */,
-				A6BFECCD1F8D03AB00723152 /* ViewController.swift */,
-				A6BFECCF1F8D03AB00723152 /* Main.storyboard */,
-				A6BFECD21F8D03AB00723152 /* Assets.xcassets */,
-				A6BFECD41F8D03AB00723152 /* LaunchScreen.storyboard */,
-				A6BFECD71F8D03AB00723152 /* Info.plist */,
+				A6BFECDD1F8D189E00723152 /* Controller */,
+				A6BFECDE1F8D18C100723152 /* View */,
+				A6BFECDF1F8D18E400723152 /* Resources */,
 			);
 			path = SecondSwiftProject;
+			sourceTree = "<group>";
+		};
+		A6BFECDD1F8D189E00723152 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6BFECCB1F8D03AB00723152 /* AppDelegate.swift */,
+				A6BFECCD1F8D03AB00723152 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A6BFECDE1F8D18C100723152 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6BFECCF1F8D03AB00723152 /* Main.storyboard */,
+				A6BFECD41F8D03AB00723152 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6BFECDF1F8D18E400723152 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6BFECD21F8D03AB00723152 /* Assets.xcassets */,
+				A6BFECD71F8D03AB00723152 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SecondSwiftProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SecondSwiftProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.SecondSwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SecondSwiftProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SecondSwiftProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.SecondSwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

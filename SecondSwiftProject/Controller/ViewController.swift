@@ -46,10 +46,14 @@ class ViewController: UIViewController
         {
             view.backgroundColor = .white
         }
+        clickyButton.setTitleColor(.black, for: .normal)
+        clickyButton2.setTitleColor(.black, for: .normal)
     }
     @IBAction func clickTheButton2(_ sender: Any)
     {
         view.backgroundColor = createRandomColor()
+        clickyButton.setTitleColor(createRandomColor(), for: .normal)
+        clickyButton2.setTitleColor(createRandomColor(), for: .normal)
     }
 }
 
