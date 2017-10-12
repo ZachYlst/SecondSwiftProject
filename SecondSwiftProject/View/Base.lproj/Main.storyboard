@@ -39,8 +39,24 @@
                                     <action selector="clickTheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLd-Lk-vVg"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghc-4D-ZnC">
+                                <rect key="frame" x="102" y="318" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="clickTheSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="LpM-JV-Rit"/>
+                                    <action selector="clickTheSwitch:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="VcS-i7-6zL"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zT4-bV-sp7">
+                                <rect key="frame" x="224" y="318" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="clickTheSwitch2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NFk-Ay-Gzh"/>
+                                </connections>
+                            </switch>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -48,6 +64,8 @@
                         <outlet property="ClickyButton" destination="vbQ-8E-uRL" id="slM-fY-MCd"/>
                         <outlet property="clickyButton" destination="vbQ-8E-uRL" id="EA8-bp-KEb"/>
                         <outlet property="clickyButton2" destination="toM-Of-EeP" id="7hN-fs-Gh6"/>
+                        <outlet property="clickySwitch" destination="Ghc-4D-ZnC" id="g8K-Zf-585"/>
+                        <outlet property="clickySwitch2" destination="zT4-bV-sp7" id="OMy-W0-YHm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

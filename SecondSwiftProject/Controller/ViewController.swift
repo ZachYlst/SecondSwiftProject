@@ -35,6 +35,8 @@ class ViewController: UIViewController
     
     @IBOutlet weak var clickyButton: UIButton!
     @IBOutlet weak var clickyButton2: UIButton!
+    @IBOutlet weak var clickySwitch: UISwitch!
+    @IBOutlet weak var clickySwitch2: UISwitch!
     
     @IBAction func clickTheButton(_ sender: UIButton)
     {
@@ -54,6 +56,17 @@ class ViewController: UIViewController
         view.backgroundColor = createRandomColor()
         clickyButton.setTitleColor(createRandomColor(), for: .normal)
         clickyButton2.setTitleColor(createRandomColor(), for: .normal)
+    }
+    @IBAction func clickTheSwitch(_ sender: UISwitch)
+    {
+        if(clickySwitch2, isOn: true)
+        {
+            func SetOn(_ on: false, animated: true)
+        }
+    }
+    @IBAction func clickTheSwitch2(_ sender: UISwitch)
+    {
+        
     }
 }
 
