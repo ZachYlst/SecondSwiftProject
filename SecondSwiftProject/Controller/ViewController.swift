@@ -57,16 +57,16 @@ class ViewController: UIViewController
         clickyButton.setTitleColor(createRandomColor(), for: .normal)
         clickyButton2.setTitleColor(createRandomColor(), for: .normal)
     }
-    @IBAction func clickTheSwitch(_ sender: UISwitch)
-    {
-        if(clickySwitch2, isOn: true)
-        {
-            func SetOn(_ on: false, animated: true)
-        }
-    }
-    @IBAction func clickTheSwitch2(_ sender: UISwitch)
-    {
-        
-    }
+//    @IBAction func clickTheSwitch(_ sender: UISwitch)
+//    {
+//        if(clickySwitch2, isOn: true)
+//        {
+//            func SetOn(_ on: false, animated: true)
+//        }
+//    }
+//    @IBAction func clickTheSwitch2(_ sender: UISwitch)
+//    {
+//
+//    }
+//}
 }
-
