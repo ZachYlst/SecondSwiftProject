@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    lazy var colorTool: ColorTools = ColorTools()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -21,52 +23,22 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    private func createRandomColor() -> UIColor
-    {
-        let randomRed: CGFloat = CGFloat(drand48())
-        let randomGreen: CGFloat = CGFloat(drand48())
-        let randomBlue: CGFloat = CGFloat(drand48())
-        
-        return UIColor(red: randomRed,
-                       green: randomGreen,
-                       blue: randomBlue,
-                       alpha: 1.0)
-    }
-    
-    @IBOutlet weak var clickyButton: UIButton!
     @IBOutlet weak var clickyButton2: UIButton!
-    @IBOutlet weak var clickySwitch: UISwitch!
-    @IBOutlet weak var clickySwitch2: UISwitch!
+    @IBOutlet weak var pickerView: UIPickerView!
     
-    @IBAction func clickTheButton(_ sender: UIButton)
+    let pickerList = ["red", "orange", "yellow", "green", "blue", "purple"]
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
-        if(view.backgroundColor == .white)
-        {
-            view.backgroundColor = .gray
-        }
-        else
-        {
-            view.backgroundColor = .white
-        }
-        clickyButton.setTitleColor(.black, for: .normal)
-        clickyButton2.setTitleColor(.black, for: .normal)
+        return 1
     }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component) -> Int
+    {
+        return colors.count
+    }
+    
     @IBAction func clickTheButton2(_ sender: Any)
     {
-        view.backgroundColor = createRandomColor()
-        clickyButton.setTitleColor(createRandomColor(), for: .normal)
-        clickyButton2.setTitleColor(createRandomColor(), for: .normal)
+        view.backgroundColor = colorTool.createRandomColor()
+        clickyButton2.setTitleColor(colorTool.createRandomColor(), for: .normal)
     }
-//    @IBAction func clickTheSwitch(_ sender: UISwitch)
-//    {
-//        if(clickySwitch2, isOn: true)
-//        {
-//            func SetOn(_ on: false, animated: true)
-//        }
-//    }
-//    @IBAction func clickTheSwitch2(_ sender: UISwitch)
-//    {
-//
-//    }
-//}
 }
