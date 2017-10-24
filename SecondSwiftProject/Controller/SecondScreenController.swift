@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 public class SecondScreenController: UIViewController
 {
+    private var soundPlayer: AVAudioPlayer?
     lazy var colorTool = ColorTools()
     
     public override func viewDidLoad()
@@ -23,15 +25,10 @@ public class SecondScreenController: UIViewController
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var imageView1: UIImageView!
-
-    @IBAction func homeButtonClick(_ sender: Any)
-    {
-        
-    }
     
     @IBAction func changeImage(_ sender: Any)
     {
-        
+        switchImage()
     }
     
     private func switchImage() -> Void
@@ -48,6 +45,59 @@ public class SecondScreenController: UIViewController
         {
             imageView1.image = UIImage(named: "night sky")
         }
+        else
+        {
+            imageView1.image = UIImage(named: "night sky 2")
+        }
+        imageCounter += 1
+    }
+    
+    private func playMusicFile() -> Void
+    {
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if (isPlaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+                soundPlayer?.play()
+            }
+        }
+    //This code is less safe - force unwrapping can cause crashes
+//        if (soundPlayer?.isPlaying)!
+//        {
+//            soundPlayer?.pause()
+//        }
+//        else
+//        {
+//            soundPlayer?.play()
+//        }
+    }
+    private func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "Nero_Promises")
+        {
+            do
+            {
+            try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                slider.maximumValue = Float ((soundPlayer?.duration)!)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
+            }
+            catch
+            {
+                print("Audio File Load Error")
+            }
+        }
+    }
+    
+    @objc private func updateSlider() -> Void
+    {
+        slider.value = Float ((soundPlayer?.currentTime)!)
     }
 }
 

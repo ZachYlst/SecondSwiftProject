@@ -24,17 +24,17 @@ class ViewController: UIViewController
     }
     
     @IBOutlet weak var clickyButton2: UIButton!
-    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var changeScreenButton: UIButton!
     
-    let pickerList = ["red", "orange", "yellow", "green", "blue", "purple"]
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
-    {
-        return 1
-    }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component) -> Int
-    {
-        return colors.count
-    }
+//    let pickerList = ["red", "orange", "yellow", "green", "blue", "purple"]
+//    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+//    {
+//        return 1
+//    }
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component) -> Int
+//    {
+//        return colors.count
+//    }
     
     @IBAction func clickTheButton2(_ sender: Any)
     {

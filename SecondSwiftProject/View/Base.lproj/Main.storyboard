@@ -24,18 +24,13 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="homeButtonClick:" destination="tbF-aL-g4H" eventType="touchUpInside" id="Xb3-sX-6ce"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="3dI-Q2-WPx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="N6e-Xo-GaF"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-9r-fwq">
                                 <rect key="frame" x="93" y="448" width="189" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wow" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-d1-PJm">
-                                <rect key="frame" x="62" y="37" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVb-HS-iAx">
                                 <rect key="frame" x="117" y="340" width="141" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,11 +41,14 @@
                                     <action selector="changeImage:" destination="tbF-aL-g4H" eventType="touchUpInside" id="3aD-GP-I9U"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-d1-PJm">
+                                <rect key="frame" x="62" y="42" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.70309354229999999" green="0.87392925129999999" blue="0.56256908989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="2Xr-FF-zml"/>
                         <connections>
-                            <outlet property="HomeButton" destination="aEB-yS-NOL" id="6TV-XC-VDf"/>
                             <outlet property="changeImageButton" destination="QVb-HS-iAx" id="K8W-kS-AXF"/>
                             <outlet property="homeButton" destination="aEB-yS-NOL" id="6tw-4H-lor"/>
                             <outlet property="imageView1" destination="YOw-d1-PJm" id="PzT-n8-Ezh"/>
@@ -70,22 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-JG-m4w">
-                                <rect key="frame" x="119" y="305" width="137" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Screen">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="0it-sU-X8o" kind="show" id="B9l-VG-sVM"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tw0-94-99n">
-                                <rect key="frame" x="0.0" y="58" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-Of-EeP">
-                                <rect key="frame" x="55" y="462" width="265" height="118"/>
+                                <rect key="frame" x="55" y="164" width="265" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
                                 <state key="normal" title="ColorButton">
@@ -95,15 +79,25 @@
                                     <action selector="clickTheButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5GV-S2-0Q2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-JG-m4w">
+                                <rect key="frame" x="119" y="391" width="137" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Screen">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6o4-g1-6Ef"/>
+                                    <segue destination="0it-sU-X8o" kind="show" id="Fyb-8U-5MY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70309354226903487" green="0.87392925126903553" blue="0.56256908987800491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="changeScreenButton" destination="eG7-JG-m4w" id="H2y-TI-W0i"/>
                         <outlet property="clickyButton2" destination="toM-Of-EeP" id="7hN-fs-Gh6"/>
-                        <outlet property="pickerView" destination="Tw0-94-99n" id="JXK-uh-sNS"/>
-                        <outletCollection property="pickerViewCollection" destination="Tw0-94-99n" collectionClass="NSMutableArray" id="Akl-qC-hF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,7 +105,4 @@
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="wow" width="225" height="225"/>
-    </resources>
 </document>
